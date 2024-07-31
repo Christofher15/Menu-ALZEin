@@ -58,33 +58,27 @@ h1 {
 
 .category {
     background-color: #fff;
-    padding: 2rem;
+    padding: 1rem 2rem;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
 }
 
 h2 {
     margin-top: 0;
+    cursor: pointer;
 }
 
-.latte-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 2rem;
+.menu-section {
+    display: none;
 }
 
-.latte-item {
-    width: 20%;
-    margin-bottom: 2rem;
-    text-align: center;
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-.latte-item img {
-    width: 100%;
-    border-radius: 5px;
+ul li {
+    padding: 0.5rem 0;
 }
 
-.latte-item p {
-    margin-top: 1rem;
-}

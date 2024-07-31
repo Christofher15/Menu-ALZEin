@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafés Calientes</title>
+    <title>AlZein - Menú</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
-                <img src="/images/logo.jpg" alt="AlZein logo">
+                <img src="/images/logo-Photoroom.png" alt="AlZein logo">
             </div>
             <nav>
                 <ul>
@@ -28,30 +28,84 @@
 
     <main>
         <div class="container">
-            <h1>Cafés calientes</h1>
+            <h1>Menú</h1>
+
             <div class="category">
-                <h2>Lattes</h2>
-                <div class="latte-items">
-                    <div class="latte-item">
-                        <img src="skinny-vanilla-latte.jpg" alt="Skinny Vanilla Latte">
-                        <p>Skinny Vainilla Latte</p>
-                    </div>
-                    <div class="latte-item">
-                        <img src="vanilla-latte.jpg" alt="Vanilla Latte">
-                        <p>Vainilla Latte</p>
-                    </div>
-                    <div class="latte-item">
-                        <img src="latte.jpg" alt="Latte">
-                        <p>Latte</p>
-                    </div>
-                    <div class="latte-item">
-                        <img src="dulce-de-leche-latte.jpg" alt="Dulce de Leche Latte">
-                        <p>Dulce de leche Latte</p>
-                    </div>
+                <h2 onclick="toggleSection('empanadas')">Empanadas (Fatay)</h2>
+                <div id="empanadas" class="menu-section">
+                    <ul>
+                        <li>Carne abierta</li>
+                        <li>Carne cerrada</li>
+                        <li>Espinaca</li>
+                        <li>Queso</li>
+                        <li>Berenjena</li>
+                    </ul>
                 </div>
             </div>
+
+            <div class="category">
+                <h2 onclick="toggleSection('platos-frios')">Platos Fríos</h2>
+                <div id="platos-frios" class="menu-section">
+                    <ul>
+                        <li>Hummus</li>
+                        <li>Puré de berenjenas (Mtabal)</li>
+                        <li>Puré de morrón (Mohammara)</li>
+                        <li>Labane (yogurt firme árabe)</li>
+                        <li>Kishke (yogurt con trigo burgol, cebolla picada, sal, ajo, perejil y nueces)</li>
+                        <li>Mayonesa de ajo</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="category">
+                <h2 onclick="toggleSection('ensaladas')">Ensaladas</h2>
+                <div id="ensaladas" class="menu-section">
+                    <ul>
+                        <li>Tabule (perejil, tomate, cebolla, trigo, aceite de oliva, sal y sal de limón)</li>
+                        <li>Babaganosh (berenjena ahumada, tomate, cebolla, perejil y morrones verde y rojo)</li>
+                        <li>Belen (berenjena y morrón sofrito con nueces y pasas de uva)</li>
+                        <li>Fatoush (lechuga, cebolla, tomate, perejil, pepino, aceitunas, queso árabe, pan frito y aderezo de la casa)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="category">
+                <h2 onclick="toggleSection('platos-calientes')">Platos Calientes</h2>
+                <div id="platos-calientes" class="menu-section">
+                    <ul>
+                        <li>Shawarma sandwich (carne/pollo/mixto)</li>
+                        <li>Shawarma al plato (carne/pollo/mixto)</li>
+                        <li>Shish kebab (carne picada en fierros a la parrilla con papas o ensalada)</li>
+                        <li>Shish taouk (brochettes de pollo cortado a cuchillo con papas fritas o ensalada)</li>
+                        <li>Lomo en pinchos (brochettes de lomo cortado a cuchillo con papas fritas o ensalada)</li>
+                        <li>Carne al plato (carne picada bien condimentada a la parrilla con papas fritas o ensalada)</li>
+                        <li>Pollo frito (1/2 porción de supremas de pollo condimentado al estilo krispy)</li>
+                        <li>Pan relleno con carne (pan árabe relleno con carne picada condimentada y cocinado a la parrilla con papas fritas o ensalada)</li>
+                        <li>Kebbe frito</li>
+                        <li>Kebbe al horno</li>
+                        <li>Hojas de parra</li>
+                        <li>Falafel al plato</li>
+                        <li>Falafel al sandwich</li>
+                        <li>Papas fritas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="category">
+                <h2 onclick="toggleSection('bebidas')">Bebidas</h2>
+                <div id="bebidas" class="menu-section">
+                    <ul>
+                        <li>Línea Coca-Cola completa</li>
+                        <li>Levite (manzana, naranja, pomelo y pera)</li>
+                        <li>Agua con gas</li>
+                        <li>Agua sin gas</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </main>
-    <script src="script.js"></script>
+
+    <script src="/js/home.js"></script>
 </body>
 </html>
