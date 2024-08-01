@@ -81,3 +81,10 @@ ul {
 ul li {
     padding: 0.5rem 0;
 }
+
+.menu-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
