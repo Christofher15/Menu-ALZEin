@@ -62,7 +62,6 @@ h1 {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
-    width: 100px;
 }
 
 h2 {
@@ -83,3 +82,9 @@ ul li {
     padding: 0.5rem 0;
 }
 
+.menu-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
