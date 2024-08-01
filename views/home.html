@@ -3,140 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlZein - Menú</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Devland</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="/images/logo-Photoroom.png" alt="AlZein logo">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">MENÚ</a></li>
-                    <li><a href="#">CAFÉ</a></li>
-                    <li><a href="#">EXPERIENCIA STARBUCKS</a></li>
-                </ul>
-            </nav>
-            <div class="location">
-                <img src="/images/location-icon.png" alt="Location Icon">
-                <a href="#">Localizar Tienda</a>
-            </div>
+    <div class="french-fries">
+        <img src="./img/french-fries.gif" alt="French Fries">
+    </div>
+    <nav>
+        <div class="logo">Devland</div>
+        <ul>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="about">
+            <h2>About us</h2>
+            <p>Have an amazing experience with our delivery services.</p>
         </div>
-    </header>
-
-    <main>
-        <div class="container">
-            <h1>Menú</h1>
-
-            <div class="category">
-                <h2 onclick="toggleSection('empanadas')">Empanadas (Fatay)</h2>
-                <div id="empanadas" class="menu-section">
-                    <ul>
-                        <li>Carne abierta</li>
-                        <img class="menu-image" src="/images/empanada abierta.jpg" alt="Empanada abierta">
-                        <li>Carne cerrada</li>
-                        <img class="menu-image" src="/images/emapanda cerrada.webp" alt="Empanada cerrada">
-                        <li>Sojok</li>
-                        <img class="menu-image" src="/images/sojok.png" alt="Sojok">
-                        <li>Espinaca</li>
-                        <img class="menu-image" src="/images/emapanda espianca.jpg" alt="Empanada de espinaca">
-                        <li>Queso</li>
-                        <img class="menu-image" src="/images/empanada queso.jpg" alt="Empanada de queso">
-                        <li>Berenjena</li>
-                        <img class="menu-image" src="/images/empanadas de berenjena.jpg" alt="Empanadas de berenjena">
-                    </ul>
-                </div>
-            </div>
-
-            <div class="category">
-                <h2 onclick="toggleSection('platos-frios')">Platos Fríos</h2>
-                <div id="platos-frios" class="menu-section">
-                    <ul>
-                        <li>Hummus</li>
-                        <img class="menu-image" src="/images/Hummus.jpg" alt="Hummus">
-                        <li>Puré de berenjenas (Mtabal)</li>
-                        <img class="menu-image" src="/images/mtabal.jpg" alt="Mtabal">
-                        <li>Puré de morrón (Mohammara)</li>
-                        <img class="menu-image" src="/images/mohamara.jpg" alt="Mohammara">
-                        <li>Labane (yogurt firme árabe)</li>
-                        <img class="menu-image" src="/images/labane.webp" alt="Labane">
-                        <li>Kishke (yogurt con trigo burgol, cebolla picada, sal, ajo, perejil y nueces)</li>
-                        <img class="menu-image" src="/images/kishke.jpg" alt="Kishke">
-                        <li>Kebbe crudo</li>
-                        <img class="menu-image" src="/images/kebbe crudo.jpg" alt="Kebbe crudo">
-                    </ul>
-                </div>
-            </div>
-
-            <div class="category">
-                <h2 onclick="toggleSection('ensaladas')">Ensaladas</h2>
-                <div id="ensaladas" class="menu-section">
-                    <ul>
-                        <li>Tabule (perejil, tomate, cebolla, trigo, aceite de oliva, sal y sal de limón)</li>
-                        <img src="/images/tabule.jpg" alt="category">
-                        <li>Babaganosh (berenjena ahumada, tomate, cebolla, perejil y morrones verde y rojo)</li>
-                        <img src="/images/babaganoush.jpg" alt="category">
-                        <li>Belen (berenjena y morrón sofrito con nueces y pasas de uva)</li>
-                        <img src="/images/ensalada_belen_con_morron_berenjenas_y_nueces.jpeg" alt="category">
-                        <li>Fatoush (lechuga, cebolla, tomate, perejil, pepino, aceitunas, queso árabe, pan frito y aderezo de la casa)</li>
-                        <img src="/images/ensalada_fattoush_perejil_tomate_cebolla_aceitunas_queso_en_cubitos_pan_arabe_frito_y_nueces.jpeg" alt="category">
-                    </ul>
-                </div>
-            </div>
-
-            <div class="category">
-                <h2 onclick="toggleSection('platos-calientes')">Platos Calientes</h2>
-                <div id="platos-calientes" class="menu-section">
-                    <ul>
-                        <li>Shawarma sandwich (carne/pollo/mixto)</li>
-                        <img src="/images/shawarma.jpg" alt="category">
-                        <li>Shawarma al plato (carne/pollo/mixto)</li>
-                        <img src="/images/shawarma_al_plato.jpg" alt="category">
-                        <li>Shish kebab (carne picada en fierros a la parrilla con papas o ensalada)</li>
-                        <img src="/images/shish_kebab_de_carne_picada.jpeg" alt="category">
-                        <li>Shish taouk (brochettes de pollo cortado a cuchillo con papas fritas o ensalada)</li>
-                        <img src="/images/brochette_de_pollo.jpeg" alt="category">
-                        <li>Lomo en pinchos (brochettes de lomo cortado a cuchillo con papas fritas o ensalada)</li>
-                        <img src="/images/shish_kebab.jpeg" alt="category">
-                        <li>Carne al plato (carne picada bien condimentada a la parrilla con papas fritas o ensalada)</li>
-                        <img src="/images/carne_picada_al_plato_pero_armada_tipo_hamburguesa_compactada_y_cocida.jpeg" alt="category">
-                        <li>Pollo frito (1/2 porción de supremas de pollo condimentado al estilo krispy)</li>
-                        <img src="/images/tenders_de_pollo_con_papas_franciscas.jpeg" alt="category">
-                        <li>Pan relleno con carne (pan árabe relleno con carne picada condimentada y cocinado a la parrilla con papas fritas o ensalada)</li>
-                        <img src="/images/toshka.jpg" alt="category">
-                        <li>Kebbe frito</li>
-                        <img src="/images/kebbe frito.avif" alt="category">
-                        <li>Kebbe al horno</li>
-                        <img src="/images/kebbe al horno.jpg" alt="category">
-                        <li>Hojas de parra</li>
-                        <img src="/images/hoja de parra.jpg" alt="category">
-                        <li>Falafel al plato</li>
-                        <img src="/images/falafel_al_plato.jpg" alt="category">
-                        <li>Falafel al sandwich</li>
-                        <img src="/images/falafel.jpeg" alt="category">
-                        <li>Papas fritas</li>
-                        <img src="images/papas_fritas_a_la_francesa.jpeg" alt="category">
-                    </ul>
-                </div>
-            </div>
-
-            <div class="category">
-                <h2 onclick="toggleSection('bebidas')">Bebidas</h2>
-                <div id="bebidas" class="menu-section">
-                    <ul>
-                        <li>Línea Coca-Cola completa</li>
-                        <li>Levite (manzana, naranja, pomelo y pera)</li>
-                        <li>Agua con gas</li>
-                        <li>Agua sin gas</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <script src="/js/home.js"></script>
+        <img src="./img/hamburguer.png" alt="Hamburger">
+    </div>
 </body>
 </html>
