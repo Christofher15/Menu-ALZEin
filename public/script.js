@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let index = 0;
         const totalSlides = images.length;
-        const imageWidth = images[0].clientWidth + 20; // Ancho de la imagen más el margen
-        slide.style.width = `${imageWidth * totalSlides}px`; // Ajusta el ancho del contenedor de slides
+        const imageWidth = images[0].clientWidth + 20; 
+        slide.style.width = `${imageWidth * totalSlides}px`; 
 
         function updateCarousel() {
             const offset = -index * imageWidth;
@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Inicializa todos los carruseles
     initializeCarousel('carousel1');
     initializeCarousel('carousel2');
     initializeCarousel('carousel3');
