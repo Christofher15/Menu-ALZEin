@@ -19,6 +19,10 @@ app.get('/home.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'views/home.html'));
 });
 
+app.get('/contactanos.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views/contactanos.html'));
+});
+
 app.listen(port, () => {
     console.log(`Servidor corriendo en http://127.0.0.1:${port}/`);
 });
