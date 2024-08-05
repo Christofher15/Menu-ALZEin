@@ -14,7 +14,7 @@ header {
     justify-content: space-between;
     padding: 10px 20px;
     background: rgba(32, 19, 13, 0.989);
-    box-sizing: border-box; /* Añadido para asegurarse de que el padding no afecte al ancho */
+    box-sizing: border-box; 
 }
 
 .logo img {
@@ -43,10 +43,10 @@ nav a:hover {
 .carousel-container {
     margin-bottom: 50px;
     position: relative;
-    width: 50%; /* Asegura que ocupe el ancho completo */
+    width: 50%; 
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra el contenido horizontalmente */
+    align-items: center;
 }
 
 .carousel {
