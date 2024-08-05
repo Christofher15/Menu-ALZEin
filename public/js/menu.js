@@ -1,5 +1,5 @@
 const carousels = document.querySelectorAll('.carousel');
-const theta = 360 / 5; // Assuming there are 5 items per carousel
+const theta = 360 / 5;
 
 function rotateCarousel(carouselId, direction) {
     const carousel = document.getElementById(carouselId);
@@ -31,7 +31,6 @@ document.querySelectorAll('.prev-button').forEach(button => {
     });
 });
 
-// Initial rotation for all carousels
 carousels.forEach(carousel => {
     carousel.setAttribute('data-current-item', 0);
     rotateCarousel(carousel.id, 0);
