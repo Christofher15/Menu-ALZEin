@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Rutas para archivos EJS
 app.get('/', (req, res) => {
-    res.render('home');
+    res.render('home'); 
 });
 
 app.get('/menu', (req, res) => {
@@ -20,7 +20,7 @@ app.get('/menu', (req, res) => {
 });
 
 app.get('/contactanos', (req, res) => {
-    res.render('contactanos');
+    res.render('contactanos'); 
 });
 
 app.listen(port, () => {
