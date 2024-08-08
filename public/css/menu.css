@@ -1,98 +1,89 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #786e04, #21150df4);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: rgba(32, 19, 13, 0.989);
+}
+
+.logo img {
+    width: 100px; 
+    height: auto; 
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    align-items: center;
+}
+
+nav li {
+    margin-right: 1rem;
 }
 
 nav a {
-    color: #fff;
     text-decoration: none;
-    padding: 0 15px;
+    color: #fff;
+    
 }
 
-nav .logo img {
-    height: 50px;
+nav a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
 }
 
-.carousel-container {
-    position: relative;
-    margin: 20px auto;
+.accordion {
+    display: flex;
     width: 80%;
     max-width: 1200px;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.carousel {
+.item {
+    flex: 1;
+    overflow: hidden;
+    transition: flex 0.5s ease;
     position: relative;
-    perspective: 1000px;
-    width: 100%;
-    height: 400px; /* Ajusta la altura del carrusel si es necesario */
-    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
 }
 
-.carousel-item {
-    position: absolute;
+.item img {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.5s ease-in-out;
-    overflow: hidden; /* Oculta partes de la imagen que sobresalgan */
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta las imágenes para que cubran el contenedor sin distorsionar */
+.item:hover {
+    flex: 5;
 }
 
-.carousel-caption {
+.item:hover img {
+    transform: scale(1.1);
+}
+
+.item .content {
     position: absolute;
-    bottom: 20px;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 3px;
+    text-align: center;
+    z-index: 10;
+    width: 80%;
+    transition: opacity 0.3s ease;
 }
 
-.prev-button, .next-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-.prev-button {
-    left: 10px;
-}
-
-.next-button {
-    right: 10px;
+.item .content h2 {
+    font-size: 1.5em;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
 }

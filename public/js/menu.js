@@ -1,39 +1,32 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const carousels = document.querySelectorAll('.carousel');
-    const theta = 360 / 5; 
+document.addEventListener("DOMContentLoaded", () => {
+    const accordions = document.querySelectorAll('.accordion');
 
-    function rotateCarousel(carouselId, direction) {
-        const carousel = document.getElementById(carouselId);
-        const items = carousel.querySelectorAll('.carousel-item');
-        let currentItem = parseInt(carousel.getAttribute('data-current-item')) || 0;
-        const totalItems = items.length;
+    accordions.forEach(accordion => {
+        const header = accordion.querySelector('h2');
+        const items = accordion.querySelectorAll('.item');
 
-        currentItem = (currentItem + direction + totalItems) % totalItems;
-        carousel.setAttribute('data-current-item', currentItem);
+        header.addEventListener('click', () => {
+            // Verifica si la sección ya está abierta
+            const isActive = header.classList.contains('active');
 
-        const angle = theta * currentItem * -1;
-        items.forEach((item, index) => {
-            const itemAngle = theta * index + angle;
-            item.style.transform = `rotateY(${itemAngle}deg) translateZ(300px)`;
+            // Cierra todas las secciones
+            accordions.forEach(acc => {
+                acc.querySelector('h2').classList.remove('active');
+                const itemContents = acc.querySelectorAll('.item');
+                itemContents.forEach(item => {
+                    const content = item.querySelector('.content');
+                    content.style.maxHeight = null;
+                });
+            });
+
+            // Si no estaba abierta, abre la sección clickeada
+            if (!isActive) {
+                header.classList.add('active');
+                items.forEach(item => {
+                    const content = item.querySelector('.content');
+                    content.style.maxHeight = content.scrollHeight + "px";
+                });
+            }
         });
-    }
-
-    document.querySelectorAll('.next-button').forEach(button => {
-        button.addEventListener('click', () => {
-            const carouselId = button.getAttribute('data-carousel');
-            rotateCarousel(carouselId, 1);
-        });
-    });
-
-    document.querySelectorAll('.prev-button').forEach(button => {
-        button.addEventListener('click', () => {
-            const carouselId = button.getAttribute('data-carousel');
-            rotateCarousel(carouselId, -1);
-        });
-    });
-
-    carousels.forEach(carousel => {
-        carousel.setAttribute('data-current-item', 0);
-        rotateCarousel(carousel.id, 0);
     });
 });
