@@ -1,32 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const accordions = document.querySelectorAll('.accordion');
+document.querySelectorAll('.item').forEach(item => {
+    item.addEventListener('mouseover', () => {
+        item.style.flex = '1 1 45%';
+    });
 
-    accordions.forEach(accordion => {
-        const header = accordion.querySelector('h2');
-        const items = accordion.querySelectorAll('.item');
-
-        header.addEventListener('click', () => {
-            // Verifica si la sección ya está abierta
-            const isActive = header.classList.contains('active');
-
-            // Cierra todas las secciones
-            accordions.forEach(acc => {
-                acc.querySelector('h2').classList.remove('active');
-                const itemContents = acc.querySelectorAll('.item');
-                itemContents.forEach(item => {
-                    const content = item.querySelector('.content');
-                    content.style.maxHeight = null;
-                });
-            });
-
-            // Si no estaba abierta, abre la sección clickeada
-            if (!isActive) {
-                header.classList.add('active');
-                items.forEach(item => {
-                    const content = item.querySelector('.content');
-                    content.style.maxHeight = content.scrollHeight + "px";
-                });
-            }
-        });
+    item.addEventListener('mouseout', () => {
+        item.style.flex = '1 1 20%';
     });
 });

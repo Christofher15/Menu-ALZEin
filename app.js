@@ -23,6 +23,10 @@ app.get('/contactanos', (req, res) => {
     res.render('contactanos'); 
 });
 
+app.get('/delivery', (req, res) => {
+    res.render('delivery'); 
+});
+
 app.listen(port, () => {
     console.log(`Servidor corriendo en http://127.0.0.1:${port}/`);
 });
