@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #786e04, #21150df4);    
+    color: #dcd8d6f4;
+}
+
+.map-and-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px; /* Espacio entre el mapa y el texto */
+    color: beige;
+}
+
+section {
+    max-width:350px; /* Ajusta el ancho del texto según tus necesidades */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
