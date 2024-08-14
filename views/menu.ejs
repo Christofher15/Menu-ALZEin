@@ -8,221 +8,247 @@
     <link rel="stylesheet" href="/css/menu.css">
 </head>
 <body>
-    <%- include("partials/header.ejs") %>
+    <header class="header">
+        <%- include("partials/header.ejs") %>
+    </header>
 
-    <div class="accordion-wrapper">
-        <!-- Entradas Calientes -->
-        <div class="accordion">
-            <h2>Entradas Calientes</h2>
-            <div class="item">
-                <img src="/images/borak.webp" alt="Borak">
-                <div class="content">Borak</div>
-            </div>
-            <div class="item">
-                <img src="/images/falafel al plato.avif" alt="Falafel al plato">
-                <div class="content">Falafel al plato</div>
-            </div>
-            <div class="item">
-                <img src="/images/hoja de parra.jpg" alt="Hojas de parra">
-                <div class="content">Hojas de parra</div>
-            </div>
-            <div class="item">
-                <img src="/images/kebbe al horno.jpg" alt="Kebbe al horno">
-                <div class="content">Kebbe al horno</div>
-            </div>
-            <div class="item">
-                <img src="/images/kebbe frito.avif" alt="Kebbe frito">
-                <div class="content">Kebbe frito</div>
-            </div>
-            <div class="item">
-                <img src="/images/papas_fritas_a_la_francesa.jpeg" alt="Papas fritas">
-                <div class="content">Papas fritas</div>
-            </div>
-        </div>
+    <main class="container">
+        <div class="carousel-wrapper">
+            <!-- Carrusel 1: Entradas Calientes -->
+            <section class="carousel-container">
+                <h2>Entradas Calientes</h2>
+                <div class="carousel" id="carousel1">
+                    <div class="carousel-item">
+                        <img src="/images/borak.webp" alt="Borak">
+                        <div class="content">Borak</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/falafel al plato.avif" alt="Falafel al plato">
+                        <div class="content">Falafel al plato</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/hoja de parra.jpg" alt="Hojas de parra">
+                        <div class="content">Hojas de parra</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/kebbe al horno.jpg" alt="Kebbe al horno">
+                        <div class="content">Kebbe al horno</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/kebbe frito.avif" alt="Kebbe frito">
+                        <div class="content">Kebbe frito</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/papas_fritas_a_la_francesa.jpeg" alt="Papas fritas">
+                        <div class="content">Papas fritas</div>
+                    </div>
+                </div>
+                <button class="prev" onclick="moveCarousel(-1, 'carousel1')">Anterior</button>
+                <button class="next" onclick="moveCarousel(1, 'carousel1')">Siguiente</button>
+            </section>
 
-        <!-- Platos Calientes -->
-        <div class="accordion">
-            <h2>Platos Calientes</h2>
-            <div class="item">
-                <img src="/images/shawarma.jpeg" alt="Shawarma de carne">
-                <div class="content">Shawarma de carne</div>
-            </div>
-            <div class="item">
-                <img src="/images/shawarma_de_carne_al_plato.jpeg" alt="Shawarma de carne al plato">
-                <div class="content">Shawarma de carne al plato</div>
-            </div>
-            <div class="item">
-                <img src="/images/shawarma_de_pollo.jpeg" alt="Shawarma de pollo">
-                <div class="content">Shawarma de pollo</div>
-            </div>
-            <div class="item">
-                <img src="/images/shawarma_de_pollo.jpeg" alt="Shawarma de pollo al plato">
-                <div class="content">Shawarma de pollo al plato</div>
-            </div>
-            <div class="item">
-                <img src="/images/shawarma.jpeg" alt="Shawarma mixto">
-                <div class="content">Shawarma mixto</div>
-            </div>
-            <div class="item">
-                <img src="/images/shawarma_de_carne_al_plato.jpeg" alt="Shawarma mixto al plato">
-                <div class="content">Shawarma mixto al plato</div>
-            </div>
-            <div class="item">
-                <img src="/images/falafel.jpeg" alt="Falafel al sandwich">
-                <div class="content">Falafel al sandwich</div>
-            </div>
-            <div class="item">
-                <img src="/images/shish_kebab_de_carne_picada.jpeg" alt="Shish Kebab">
-                <div class="content">Shish Kebab</div>
-            </div>
-            <div class="item">
-                <img src="/images/brochette_de_pollo.jpeg" alt="Shish Taouk">
-                <div class="content">Shish Taouk</div>
-            </div>
-            <div class="item">
-                <img src="/images/shish_kebab.jpeg" alt="Lomo">
-                <div class="content">Lomo</div>
-            </div>
-            <div class="item">
-                <img src="/images/carne_picada_al_plato_pero_armada_tipo_hamburguesa_compactada_y_cocida.jpeg" alt="Carne al plato">
-                <div class="content">Carne al plato</div>
-            </div>
-            <div class="item">
-                <img src="/images/toshka.jpg" alt="Toshka">
-                <div class="content">Toshka</div>
-            </div>
-            <div class="item">
-                <img src="/images/tenders_de_pollo_con_papas_franciscas.jpeg" alt="1/2 porción de pollo crispy">
-                <div class="content">1/2 pollo crispy</div>
-            </div>
-        </div>
+            <!-- Carrusel 2: Platos Calientes -->
+            <section class="carousel-container">
+                <h2>Platos Calientes</h2>
+                <div class="carousel" id="carousel2">
+                    <div class="carousel-item">
+                        <img src="/images/shawarma.jpeg" alt="Shawarma de carne">
+                        <div class="content">Shawarma de carne</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/shawarma_de_carne_al_plato.jpeg" alt="Shawarma de carne al plato">
+                        <div class="content">Shawarma de carne al plato</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/shawarma_de_pollo.jpeg" alt="Shawarma de pollo">
+                        <div class="content">Shawarma de pollo</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/shawarma_de_pollo.jpeg" alt="Shawarma de pollo al plato">
+                        <div class="content">Shawarma de pollo al plato</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/shawarma.jpeg" alt="Shawarma mixto">
+                        <div class="content">Shawarma mixto</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/shawarma_de_carne_al_plato.jpeg" alt="Shawarma mixto al plato">
+                        <div class="content">Shawarma mixto al plato</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/falafel.jpeg" alt="Falafel al sandwich">
+                        <div class="content">Falafel al sandwich</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/shish_kebab_de_carne_picada.jpeg" alt="Shish Kebab">
+                        <div class="content">Shish Kebab</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/brochette_de_pollo.jpeg" alt="Shish Taouk">
+                        <div class="content">Shish Taouk</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/shish_kebab.jpeg" alt="Lomo">
+                        <div class="content">Lomo</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/carne_picada_al_plato_pero_armada_tipo_hamburguesa_compactada_y_cocida.jpeg" alt="Carne al plato">
+                        <div class="content">Carne al plato</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/toshka.jpg" alt="Toshka">
+                        <div class="content">Toshka</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/tenders_de_pollo_con_papas_franciscas.jpeg" alt="1/2 porción de pollo crispy">
+                        <div class="content">1/2 pollo crispy</div>
+                    </div>
+                </div>
+                <button class="prev" onclick="moveCarousel(-1, 'carousel2')">Anterior</button>
+                <button class="next" onclick="moveCarousel(1, 'carousel2')">Siguiente</button>
+            </section>
 
-        <!-- Platos fríos/Ensaladas -->
-        <div class="accordion">
-            <h2>Platos fríos/Ensaladas</h2>
-            <div class="item">
-                <img src="/images/Hummus.jpg" alt="Hummus">
-                <div class="content">Hummus</div>
-            </div>
-            <div class="item">
-                <img src="/images/mtabal.jpg" alt="Mtabal">
-                <div class="content">Mtabal</div>
-            </div>
-            <div class="item">
-                <img src="/images/mohamara.jpg" alt="Mohammara">
-                <div class="content">Mohammara</div>
-            </div>
-            <div class="item">
-                <img src="/images/labane.webp" alt="Labane">
-                <div class="content">Labane</div>
-            </div>
-            <div class="item">
-                <img src="/images/kishke.jpg" alt="Kishke">
-                <div class="content">Kishke</div>
-            </div>
-            <div class="item">
-                <img src="/images/tabule.jpg" alt="Tabule">
-                <div class="content">Tabule</div>
-            </div>
-            <div class="item">
-                <img src="/images/kebbe crudo.jpg" alt="Kebbe crudo">
-                <div class="content">Kebbe crudo</div>
-            </div>
-            <div class="item">
-                <img src="/images/babaganoush.jpg" alt="Babaganoush">
-                <div class="content">Babaganoush</div>
-            </div>
-            <div class="item">
-                <img src="/images/ensalada_belen_con_morron_berenjenas_y_nueces.jpeg" alt="Belen">
-                <div class="content">Belen</div>
-            </div>
-            <div class="item">
-                <img src="/images/ensalada_fattoush_perejil_tomate_cebolla_aceitunas_queso_en_cubitos_pan_arabe_frito_y_nueces.jpeg" alt="Fattoush">
-                <div class="content">Fattoush</div>
-            </div>
-        </div>
+            <!-- Carrusel 3: Platos fríos/Ensaladas -->
+            <section class="carousel-container">
+                <h2>Platos fríos/Ensaladas</h2>
+                <div class="carousel" id="carousel3">
+                    <div class="carousel-item">
+                        <img src="/images/Hummus.jpg" alt="Hummus">
+                        <div class="content">Hummus</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/mtabal.jpg" alt="Mtabal">
+                        <div class="content">Mtabal</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/mohamara.jpg" alt="Mohammara">
+                        <div class="content">Mohammara</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/labane.webp" alt="Labane">
+                        <div class="content">Labane</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/kishke.jpg" alt="Kishke">
+                        <div class="content">Kishke</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/tabule.jpg" alt="Tabule">
+                        <div class="content">Tabule</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/kebbe crudo.jpg" alt="Kebbe crudo">
+                        <div class="content">Kebbe crudo</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/babaganoush.jpg" alt="Babaganoush">
+                        <div class="content">Babaganoush</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/ensalada_belen_con_morron_berenjenas_y_nueces.jpeg" alt="Belen">
+                        <div class="content">Belen</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/ensalada_fattoush_perejil_tomate_cebolla_aceitunas_queso_en_cubitos_pan_arabe_frito_y_nueces.jpeg" alt="Fattoush">
+                        <div class="content">Fattoush</div>
+                    </div>
+                </div>
+                <button class="prev" onclick="moveCarousel(-1, 'carousel3')">Anterior</button>
+                <button class="next" onclick="moveCarousel(1, 'carousel3')">Siguiente</button>
+            </section>
 
-        <!-- Empanadas -->
-        <div class="accordion">
-            <h2>Empanadas</h2>
-            <div class="item">
-                <img src="/images/empanada abierta.jpg" alt="Empanada abierta">
-                <div class="content">Empanada abierta</div>
-            </div>
-            <div class="item">
-                <img src="/images/emapanda cerrada.webp" alt="Empanada cerrada">
-                <div class="content">Empanada cerrada</div>
-            </div>
-            <div class="item">
-                <img src="/images/sojok.png" alt="Sojok">
-                <div class="content">Sojok</div>
-            </div>
-            <div class="item">
-                <img src="/images/empanada queso.jpg" alt="Empanada de queso">
-                <div class="content">Empanada de queso</div>
-            </div>
-            <div class="item">
-                <img src="/images/empanadas de berenjena.jpg" alt="Empanada de berenjena">
-                <div class="content">Empanada de berenjena</div>
-            </div>
-            <div class="item">
-                <img src="/images/emapanda espianca.jpg" alt="Empanada de espianca">
-                <div class="content">Empanada de espianca</div>
-            </div>
-            </div>
-        </div>
+            <!-- Carrusel 4: Empanadas -->
+            <section class="carousel-container">
+                <h2>Empanadas</h2>
+                <div class="carousel" id="carousel4">
+                    <div class="carousel-item">
+                        <img src="/images/empanada abierta.jpg" alt="Empanada abierta">
+                        <div class="content">Empanada abierta</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/emapanda cerrada.webp" alt="Empanada cerrada">
+                        <div class="content">Empanada cerrada</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/sojok.png" alt="Sojok">
+                        <div class="content">Sojok</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/empanada queso.jpg" alt="Empanada de queso">
+                        <div class="content">Empanada de queso</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/empanadas de berenjena.jpg" alt="Empanada de berenjena">
+                        <div class="content">Empanada de berenjena</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/emapanda espianca.jpg" alt="Empanada de espianca">
+                        <div class="content">Empanada de espianca</div>
+                    </div>
+                </div>
+                <button class="prev" onclick="moveCarousel(-1, 'carousel4')">Anterior</button>
+                <button class="next" onclick="moveCarousel(1, 'carousel4')">Siguiente</button>
+            </section>
 
-        <!-- Bebidas -->
-        <div class="accordion">
-            <h2>Bebidas</h2>
-            <div class="item">
-                <img src="/images/coca-cola.jpg" alt="Coca-Cola comun">
-                <div class="content">Coca-Cola comun 500ml</div>
-            </div>
-            <div class="item">
-                <img src="/images/coca-cola cero.jpeg" alt="Coca-Cola cero">
-                <div class="content">Coca-Cola cero 500ml</div>
-            </div>
-            <div class="item">
-                <img src="/images/fanta.jpeg" alt="Fanta">
-                <div class="content">Fanta 500ml</div>
-            </div>
-            <div class="item">
-                <img src="/images/sprite-comun.jpg" alt="Sprite comun">
-                <div class="content">Sprite comun 500ml</div>
-            </div>
-            <div class="item">
-                <img src="/images/sprite-cero.webp" alt="Sprite cero">
-                <div class="content">Sprite cero 500ml</div>
-            </div>
-            <div class="item">
-                <img src="/images/levite-manzana.jpg" alt="Levite manzana">
-                <div class="content">Levite de manzana 500ml</div>
-            </div>
-            <div class="item">
-                <img src="/images/levite-naranja.jpg" alt="Levite naranja">
-                <div class="content">Levite naranja 500ml</div>
-            </div>
-            <div class="item">
-                <img src="/images/levite-pera.webp" alt="Levite pera">
-                <div class="content">Levite pera 500ml</div>
-            </div>
-            <div class="item">
-                <img src="/images/levite-pomelo.webp" alt="Levite pomelo">
-                <div class="content">Levite pomelo 500ml</div>
-            </div>
-            <div class="item">
-                <img src="/images/Schweppes-pomelo.webp" alt="Schweppes pomelo">
-                <div class="content">Schweppes pomelo 500ml</div>
-            </div>
-            <div class="item">
-                <img src="/images/Schweppes-tonica.webp" alt="Schweppes tónica">
-                <div class="content">Schweppes tónica 500ml</div>
-            </div>
+            <!-- Carrusel 5: Bebidas -->
+            <section class="carousel-container">
+                <h2>Bebidas</h2>
+                <div class="carousel" id="carousel5">
+                    <div class="carousel-item">
+                        <img src="/images/coca-cola.jpg" alt="Coca-Cola comun">
+                        <div class="content">Coca-Cola comun 500ml</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/coca-cola cero.jpeg" alt="Coca-Cola cero">
+                        <div class="content">Coca-Cola cero 500ml</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/fanta.jpeg" alt="Fanta">
+                        <div class="content">Fanta 500ml</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/sprite-comun.jpg" alt="Sprite comun">
+                        <div class="content">Sprite comun 500ml</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/sprite-cero.webp" alt="Sprite cero">
+                        <div class="content">Sprite cero 500ml</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/levite-manzana.jpg" alt="Levite manzana">
+                        <div class="content">Levite de manzana 500ml</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/levite-naranja.jpg" alt="Levite naranja">
+                        <div class="content">Levite naranja 500ml</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/levite-pera.webp" alt="Levite pera">
+                        <div class="content">Levite pera 500ml</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/levite-pomelo.webp" alt="Levite pomelo">
+                        <div class="content">Levite pomelo 500ml</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/Schweppes-pomelo.webp" alt="Schweppes pomelo">
+                        <div class="content">Schweppes pomelo 500ml</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/Schweppes-tonica.webp" alt="Schweppes tónica">
+                        <div class="content">Schweppes tónica 500ml</div>
+                    </div>
+                </div>
+                <button class="prev" onclick="moveCarousel(-1, 'carousel5')">Anterior</button>
+                <button class="next" onclick="moveCarousel(1, 'carousel5')">Siguiente</button>
+            </section>
         </div>
-    </div>
+    </main>
+
+    <footer class="footer">
+        <%- include("partials/footer.ejs") %>
+    </footer>
 
     <script src="/js/menu.js"></script>
-    <%- include("partials/footer.ejs") %>
 </body>
 </html>
