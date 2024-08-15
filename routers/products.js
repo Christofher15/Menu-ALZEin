@@ -4,13 +4,13 @@ const router = express.Router();
 // Productos del menú
 const products = [
     // Sección Entradas Calientes
-    { id: 1, name: 'Borak', description: '6 empanaditas fritas con relleno de queso árabe, perejil y especias.', price: 8000, image: '/images/borak.jpg' },
-    { id: 2, name: 'Falafel', description: '6 bolitas de garbanzo procesado con perejil, morrón y especias árabes.', price: 8000, image: '/images/falafel.jpg' },
-    { id: 3, name: 'Hoja de Parra', description: 'Hojas de parra envueltas rellenas de arroz, carne picada y especias árabes.', price: 8000, image: '/images/hoja_parra.jpg' },
-    { id: 4, name: 'Kebbe al Horno', description: 'Masa de trigo burgol con carne compactada relleno de carne picada, cebolla, nueces y especias árabes.', price: 8000, image: '/images/kebbe_horno.jpg' },
-    { id: 5, name: 'Kebbe Frito', description: 'Masa de trigo burgol con carne compactada relleno de carne picada, cebolla, nueces y especias árabes.', price: 8000, image: '/images/kebbe_frito.jpg' },
-    { id: 6, name: 'Papas Fritas', description: 'Corte tradicional en bastones con especias de la casa.', price: 8000, image: '/images/papas_fritas.jpg' },
-    { id: 7, name: 'Queso a la Parrilla', description: 'Queso árabe asado con aceitunas.', price: 8000, image: '/images/queso_parrilla.jpg' },
+    { id: 1, name: 'Borak', description: '6 empanaditas fritas con relleno de queso árabe, perejil y especias.', price: 8000, image: '/images/borak.webp' },
+    { id: 2, name: 'Falafel', description: '6 bolitas de garbanzo procesado con perejil, morrón y especias árabes.', price: 8000, image: '/images/falafel al plato.avif' },
+    { id: 3, name: 'Hoja de Parra', description: 'Hojas de parra envueltas rellenas de arroz, carne picada y especias árabes.', price: 8000, image: '/images/hoja de parra.jpg' },
+    { id: 4, name: 'Kebbe al Horno', description: 'Masa de trigo burgol con carne compactada relleno de carne picada, cebolla, nueces y especias árabes.', price: 8000, image: '/images/kebbe al horno.jpg' },
+    { id: 5, name: 'Kebbe Frito', description: 'Masa de trigo burgol con carne compactada relleno de carne picada, cebolla, nueces y especias árabes.', price: 8000, image: '/images/kebbe frito.avif' },
+    { id: 6, name: 'Papas Fritas', description: 'Corte tradicional en bastones con especias de la casa.', price: 8000, image: '/images/papas_fritas_a_la_francesa.jpeg' },
+    { id: 7, name: 'Queso a la Parrilla', description: 'Queso árabe asado con aceitunas.', price: 8000, image: '/images/queso a la parrilla.jpg' },
 
     // Sección Platos Calientes
     { id: 8, name: 'Shawarma de Carne', description: 'Carne, lechuga, tomate y cebolla, mayonesa de ajo y tarator.', price: 15000, image: '/images/shawarma_carne.jpg' },
