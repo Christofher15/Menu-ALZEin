@@ -11,7 +11,7 @@ body {
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    gap: 20px; /* Espacio entre el mapa y el texto */
+    gap: 20px; 
     color: beige;
 }
 
