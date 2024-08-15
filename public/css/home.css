@@ -1,79 +1,106 @@
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #d99e08;
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #333;
+    height: 100%;
+}
+
+.hero {
+    background-image: url('/images/shawarma_de_carne_al_plato.jpeg'); /* Reemplaza con la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    position: relative;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    background: rgba(0, 0, 0, 0.5); /* Añadir una capa oscura para resaltar el contenido */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-left {
+    max-width: 70%;
+}
+
+.hero-right {
+    text-align: right;
+}
+
+.logo img {
+    width: 120px;
+    margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 3em;
-    color: #b45f06;
-    text-align: center;
-    margin-top: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size: 48px;
+    margin: 10px 0;
+    color: #ffa500;
 }
 
-.about {
-    max-width: 800px;
-    margin: 50px auto;
+.emoji {
+    font-size: 48px;
+}
+
+.options {
+    margin: 20px 0;
+}
+
+.option {
+    display: inline-block;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.option img {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.address {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.menu-button {
+    display: inline-block;
+    background-color: #ffa500;
+    color: #333;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #ff8c00;
+}
+
+.footer {
+    background-color: #222;
     padding: 20px;
     text-align: center;
-    background-color: #cec8b6f9;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-
-.about p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #666;
-}
-
-.about p:first-of-type {
-    font-size: 1.5em;
-    color: #b45f06;
-    margin-bottom: 10px;
-}
-
-
-section.content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-/* Animación */
-.about h1 {
-    animation: slideDown 1.5s ease-out;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Botones */
-button {
-    background-color: #b45f06;
     color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
-button:hover {
-    background-color: #8a4505;
+.footer p {
+    margin: 5px 0;
 }
