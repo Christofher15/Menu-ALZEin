@@ -1,11 +1,73 @@
 const express = require('express');
 const router = express.Router();
 
-// Ejemplo de productos en memoria
+// Productos del menú
 const products = [
-    { id: 1, name: 'Producto 1', description: 'Descripción del producto 1', price: 100 },
-    { id: 2, name: 'Producto 2', description: 'Descripción del producto 2', price: 200 },
-    // Más productos...
+    // Sección Entradas Calientes
+    { id: 1, name: 'Borak', description: '6 empanaditas fritas con relleno de queso árabe, perejil y especias.', price: 8000 },
+    { id: 2, name: 'Falafel', description: '6 bolitas de garbanzo procesado con perejil, morrón y especias árabes.', price: 8000 },
+    { id: 3, name: 'Hoja de Parra', description: 'Hojas de parra envueltas rellenas de arroz, carne picada y especias árabes.', price: 8000 },
+    { id: 4, name: 'Kebbe al Horno', description: 'Masa de trigo burgol con carne compactada relleno de carne picada, cebolla, nueces y especias árabes.', price: 8000 },
+    { id: 5, name: 'Kebbe Frito', description: 'Masa de trigo burgol con carne compactada relleno de carne picada, cebolla, nueces y especias árabes.', price: 8000 },
+    { id: 6, name: 'Papas Fritas', description: 'Corte tradicional en bastones con especias de la casa.', price: 8000 },
+    { id: 7, name: 'Queso a la Parrilla', description: 'Queso árabe asado con aceitunas.', price: 8000 },
+
+    // Sección Platos Calientes
+    { id: 8, name: 'Shawarma de Carne', description: 'Carne, lechuga, tomate y cebolla, mayonesa de ajo y tarator.', price: 15000 },
+    { id: 9, name: 'Shawarma de Carne al Plato', description: 'Carne, lechuga, tomate y cebolla, mayonesa de ajo y tarator.', price: 15000 },
+    { id: 10, name: 'Shawarma de Pollo', description: 'Pollo, lechuga, tomate y cebolla, mayonesa de ajo.', price: 15000 },
+    { id: 11, name: 'Shawarma de Pollo al Plato', description: 'Pollo, lechuga, tomate y cebolla, mayonesa de ajo y tarator.', price: 15000 },
+    { id: 12, name: 'Shawarma Mixto', description: 'Carne y pollo, lechuga, tomate y cebolla, mayonesa de ajo y tarator.', price: 15000 },
+    { id: 13, name: 'Shawarma Mixto al Plato', description: 'Carne y pollo, lechuga, tomate y cebolla, mayonesa de ajo y tarator.', price: 15000 },
+    { id: 14, name: 'Shish Kebab', description: 'Carne picada puesta en fierros a la parrilla con papas o ensalada.', price: 15000 },
+    { id: 15, name: 'Shish Taouk', description: 'Brochettes de pollo cortado a cuchillo con papas fritas o ensalada.', price: 15000 },
+    { id: 16, name: 'Lomo', description: '2 brochettes de lomo cortado a cuchillo con papas fritas o ensalada.', price: 15000 },
+    { id: 17, name: 'Falafel en Sandwich', description: 'Lechuga, cebolla y tomate, salsa de ajo o hummus y salsa de tarator.', price: 15000 },
+    { id: 18, name: 'Carne al Plato', description: 'Carne picada bien condimentada a la parrilla con papas fritas o ensalada.', price: 15000 },
+    { id: 19, name: 'Pollo Crocante', description: '1/2 porción de supremas de pollo condimentado al estilo crispy.', price: 15000 },
+    { id: 20, name: 'Toshka', description: 'Pan árabe relleno con carne picada condimentada y cocinado a la parrilla con papas fritas o ensalada.', price: 15000 },
+
+    // Sección Platos Fríos/Ensaladas
+    { id: 21, name: 'Hummus', description: 'Garbanzo, tahine y especias árabes.', price: 10000 },
+    { id: 22, name: 'Mtabal (Puré de Berenjenas)', description: 'Berenjenas ahumadas con tahine, yogurt, ajo y sal.', price: 10000 },
+    { id: 23, name: 'Mohammara (Puré de Morrón)', description: 'Morrones ahumados, pan rallado, pimentón en polvo y especias árabes.', price: 10000 },
+    { id: 24, name: 'Labane (Yogurt)', description: 'Yogurt árabe firme con aceite de oliva y aceitunas.', price: 10000 },
+    { id: 25, name: 'Kishke', description: 'Yogurt árabe con trigo burgol, cebolla picada, sal, ajo, perejil y nueces.', price: 10000 },
+    { id: 26, name: 'Tabule', description: 'Perejil, tomate, cebolla, trigo, aceite de oliva, sal y sal de limón.', price: 10000 },
+    { id: 27, name: 'Babaganoush', description: 'Berenjenas ahumadas, tomate, cebolla, perejil y morrones verde y rojo.', price: 10000 },
+    { id: 28, name: 'Belen', description: 'Berenjena y morrón sofrito con nueces y pasas de uva.', price: 10000 },
+    { id: 29, name: 'Fattoush', description: 'Lechuga, cebolla, tomate, perejil, pepino, aceitunas, queso árabe, pan frito y aderezo de la casa.', price: 10000 },
+
+    // Sección Empanadas
+    { id: 30, name: 'Empanada Abierta', description: 'Empanada abierta con carne y especias.', price: 5000 },
+    { id: 31, name: 'Empanada Cerrada', description: 'Empanada cerrada con carne y especias.', price: 5000 },
+    { id: 32, name: 'Sojok', description: 'Empanada con carne muy condimentada.', price: 5000 },
+    { id: 33, name: 'Empanada de Queso', description: 'Empanada de queso ricotta y perejil.', price: 5000 },
+    { id: 34, name: 'Empanada de Espinaca', description: 'Empanada de espinaca con cebolla y especias.', price: 5000 },
+    { id: 35, name: 'Empanada de Berenjena', description: 'Berenjenas con morrón, cebolla fritos, nueces y especias árabes.', price: 5000 },
+
+    // Sección Bebidas
+    { id: 36, name: 'Coca-Cola Común', description: 'Coca-Cola 500ml.', price: 3000 },
+    { id: 37, name: 'Coca-Cola Cero', description: 'Coca-Cola 500ml.', price: 3000 },
+    { id: 38, name: 'Sprite Común', description: 'Sprite 500ml.', price: 3000 },
+    { id: 39, name: 'Sprite Cero', description: 'Sprite cero 500ml.', price: 3000 },
+    { id: 40, name: 'Fanta Común', description: 'Fanta 500ml.', price: 3000 },
+    { id: 41, name: 'Agua con Gas', description: 'Agua con gas 500ml.', price: 3000 },
+    { id: 42, name: 'Agua sin Gas', description: 'Agua sin gas 500ml.', price: 3000 },
+    { id: 43, name: 'Levite Manzana', description: 'Levite de manzana 500ml.', price: 3000 },
+    { id: 44, name: 'Levite Naranja', description: 'Levite de naranja 500ml.', price: 3000 },
+    { id: 45, name: 'Levite Pera', description: 'Levite de pera 500ml.', price: 3000 },
+    { id: 46, name: 'Levite Pomelo', description: 'Levite pomelo 500ml.', price: 3000 },
+    { id: 47, name: 'Schweppes Tónica', description: 'Schweppes tónica 500ml.', price: 3000 },
+    { id: 48, name: 'Schweppes Pomelo', description: 'Schweppes pomelo 500ml.', price: 3000 },
+    { id: 49, name: 'Schweppes Citrus', description: 'Schweppes citrus 500ml.', price: 3000 },
+
+    // Sección Postres
+    { id: 50, name: 'Mhalabia', description: 'Pudín de leche con sabor a agua de rosas.', price: 5000 },
+    { id: 51, name: 'Knafeh', description: 'Postre tradicional árabe con queso y pasta de filo.', price: 5000 },
+    { id: 52, name: 'Baklava', description: 'Postre tradicional árabe con nueces y miel.', price: 5000 },
+    { id: 53, name: 'Riz bi Laban', description: 'Arroz con leche, canela y esencia de rosas.', price: 5000 },
+    { id: 54, name: 'Atayef', description: 'Crepas rellenas de nueces y miel.', price: 5000 }
 ];
 
 // Función para obtener un producto por su ID
