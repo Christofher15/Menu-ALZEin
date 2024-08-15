@@ -26,12 +26,12 @@ body {
     width: 80%;
     max-width: 1200px;
     background: rgba(0, 0, 0, 0.5); /* Añadir una capa oscura para resaltar el contenido */
-    padding: 20px;
+    padding: 300px;
     border-radius: 10px;
 }
 
 .hero-left {
-    max-width: 70%;
+    max-width: 50%;
 }
 
 .hero-right {
