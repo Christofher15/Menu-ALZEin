@@ -7,13 +7,13 @@ body {
 }
 
 .hero {
-    background-image: url('/images/shawarma_de_carne_al_plato.jpeg'); /* Reemplaza con la imagen de fondo */
+    background-image: url('/images/shawarma_de_carne_al_plato.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: left;
     position: relative;
@@ -23,24 +23,24 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
-    max-width: 1200px;
-    background: rgba(0, 0, 0, 0.5); /* Añadir una capa oscura para resaltar el contenido */
-    padding: 300px;
-    border-radius: 10px;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    border-radius: 0;
 }
 
-.hero-left {
-    max-width: 50%;
-}
-
-.hero-right {
-    text-align: right;
+.logo-text-container {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    gap: 10px; 
+    padding-left: 20px;
 }
 
 .logo img {
-    width: 120px;
-    margin-bottom: 20px;
+    width: 200px; 
+    margin-bottom: 0; 
 }
 
 h1 {
@@ -49,8 +49,8 @@ h1 {
     color: #ffa500;
 }
 
-.emoji {
-    font-size: 48px;
+.emoji img {
+    width: 80px;  
 }
 
 .options {
@@ -64,7 +64,7 @@ h1 {
 }
 
 .option img {
-    width: 20px;
+    width: 80px;
     vertical-align: middle;
     margin-right: 5px;
 }
@@ -77,9 +77,9 @@ h1 {
 
 .menu-button {
     display: inline-block;
-    background-color: #ffa500;
-    color: #333;
-    padding: 15px 30px;
+    background-color: #dec60fd6;
+    color: #000000;
+    padding: 15px 100px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
@@ -88,12 +88,12 @@ h1 {
 }
 
 .menu-button:hover {
-    background-color: #ff8c00;
+    background-color: #927009;
 }
 
 .footer {
     background-color: #222;
-    padding: 20px;
+    padding: -20px;
     text-align: center;
     color: #fff;
     position: absolute;
