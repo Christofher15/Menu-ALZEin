@@ -235,3 +235,162 @@ footer {
     padding: 10px 0;
     margin-top: 20px;
 }
+
+
+/* Pantallas grandes (escritorio) */
+@media (min-width: 1024px) {
+    .product-image {
+        max-width: 50%;
+    }
+
+    .product-details {
+        max-width: 500px;
+    }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .product-page {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .product-image {
+        max-width: 70%;
+    }
+
+    .product-details {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+    .product-page {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .product-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .product-details {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo img {
+        width: 60px;
+        margin-right: 0;
+    }
+}
+/* styles for the hamburger menu button */
+.menu-toggle {
+    display: none; /* Hide by default */
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #ffee00;
+    display: block;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #ffee00;
+    transition: transform 0.3s ease;
+}
+
+.menu-icon::before {
+    top: -8px;
+}
+
+.menu-icon::after {
+    top: 8px;
+}
+
+.main-nav {
+    display: flex;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin: 0;
+}
+
+.main-nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        border-top: 1px solid #ff0000;
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-icon.active {
+        background-color: transparent;
+    }
+
+    .menu-icon.active::before {
+        transform: rotate(45deg);
+    }
+
+    .menu-icon.active::after {
+        transform: rotate(-45deg);
+    }
+}

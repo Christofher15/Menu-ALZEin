@@ -104,3 +104,70 @@ h1 {
 .footer p {
     margin: 5px 0;
 }
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 20px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+        height: auto;
+    }
+
+    .hero-left {
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .emoji img {
+        width: 50px;
+    }
+
+    .option img {
+        width: 50px;
+    }
+
+    .menu-button {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .emoji img {
+        width: 40px;
+    }
+
+    .option img {
+        width: 40px;
+    }
+
+    .menu-button {
+        padding: 10px 50px;
+        font-size: 16px;
+    }
+
+    .address {
+        font-size: 12px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+}
