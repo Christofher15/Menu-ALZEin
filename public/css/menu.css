@@ -10,18 +10,17 @@ body {
     padding: 0;
 }
 
-/* Quitar el subrayado y cambiar el color de los enlaces en el nombre del producto */
+
 .menu-item a {
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    color: #fff; /* Cambia el color del texto a blanco o el color que prefieras */
+    text-decoration: none; 
+    color: #fff; 
 }
 
 .menu-item a:hover {
-    color: #ffa500; /* Cambia el color del texto al pasar el mouse, si lo deseas */
-    text-decoration: none; /* Mantén el subrayado eliminado al pasar el mouse */
+    color: #ffa500; 
+    text-decoration: none; 
+
 }
-
-
 .product-page {
     display: flex;
     height: 100vh;
@@ -35,13 +34,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 58%; /* Ajusta la altura del contenedor al 100% del padre */
+    height: 58%; 
 }
 
 .product-image img {
     width: 100%;
-    height: 100%; /* Ajusta la altura al 100% del contenedor */
-    object-fit: cover; /* La imagen cubrirá el contenedor sin distorsionarse */
+    height: 100%; 
+    object-fit: cover; 
     border-radius: 10px;
 }
 

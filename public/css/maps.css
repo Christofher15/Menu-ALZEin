@@ -1,109 +1,113 @@
-/* Body */
 body {
+    font-family: Arial, sans-serif;
+    background-image: url('/images/brochette_de_pollo.jpeg'); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.75); 
+    background-blend-mode: darken; 
+    color: #fff;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #786e04, #21150df4);    
-    color: #dcd8d6f4;
 }
 
-/* Header */
-.main-header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
+    padding: 10px 20px;
 }
 
 .logo img {
-    width: 50px;
-    margin-right: 10px;
+    width: 80px; 
+    margin-right: 50px;
 }
 
-.logo h1 {
-    font-size: 24px;
-    margin: 0;
-}
-
-.main-nav ul {
+nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
+    gap: 15px;
 }
 
-.main-nav ul li {
-    margin: 0 15px;
-}
-
-.main-nav ul li a {
+nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    padding: 5px 10px;
 }
 
-.main-nav ul li a:hover {
-    color: #ffa500;
+nav a:hover {
+    background-color: #444;
+    border-radius: 5px;
 }
 
-/* Map and Info */
-.map-and-info {
+.container {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
-    justify-content: center;
-    gap: 20px;
-    color: beige;
+    margin: 20px;
 }
 
-section {
-    max-width: 350px; /* Ajusta el ancho del texto según tus necesidades */
+.mapa {
+    flex: 1;
+    margin-right: 100px; 
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+.contacto {
+    flex: 1;
 }
 
-ul li {
-    margin: 10px 0;
-}
-
-/* Footer */
-.main-footer {
+footer {
     background-color: #333;
-    color: #fff;
     text-align: center;
-    padding: 20px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 10px 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    flex-wrap: wrap; 
+
 }
 
 .footer-content {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around; 
     align-items: center;
+    width: 100%; 
+    flex-wrap: wrap; 
 }
 
-.footer-content .social-media a {
-    margin: 0 10px;
+.footer__section {
+    flex: 1;
+    max-width: 300px; 
+    text-align: center;
+    margin: 10px;
 }
 
-.footer-content img {
-    width: 30px;
-    height: 30px;
+.footer-icon {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 10px; 
+    vertical-align: middle; 
 }
 
-.footer-content p {
-    margin-top: 10px;
+
+.footer__section h4 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.footer__section p {
     font-size: 14px;
+    color: #ccc;
 }
 
+.footer img {
+    width: 50px; 
+    height: auto;
+    display: inline-block;
+    margin: 0 10px; 
+}
+
+.footer p {
+    margin-top: 10px; 
+    color: #fff;
+}
