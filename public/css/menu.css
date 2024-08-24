@@ -10,6 +10,141 @@ body {
     padding: 0;
 }
 
+/* Quitar el subrayado y cambiar el color de los enlaces en el nombre del producto */
+.menu-item a {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: #fff; /* Cambia el color del texto a blanco o el color que prefieras */
+}
+
+.menu-item a:hover {
+    color: #ffa500; /* Cambia el color del texto al pasar el mouse, si lo deseas */
+    text-decoration: none; /* Mantén el subrayado eliminado al pasar el mouse */
+}
+
+
+.product-page {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 58%; /* Ajusta la altura del contenedor al 100% del padre */
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%; /* Ajusta la altura al 100% del contenedor */
+    object-fit: cover; /* La imagen cubrirá el contenedor sin distorsionarse */
+    border-radius: 10px;
+}
+
+.product-details {
+    flex: 1;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 500px;
+}
+
+.product-header {
+    margin-bottom: 20px;
+}
+
+.product-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.product-header p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #ccc;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-extras {
+    margin-bottom: 20px;
+}
+
+.product-extras h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.extras-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.extras-options label {
+    display: flex;
+    align-items: center;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.extras-options input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quantity span {
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.add-to-cart {
+    background-color: #ffa500;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add-to-cart:hover {
+    background-color: #ff8c00;
+}
+
+
 header {
     display: flex;
     justify-content: space-between;
