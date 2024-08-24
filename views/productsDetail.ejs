@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/productsDetail.css" />
+    <title><%= product.name %> - Detalles del Producto</title>
+</head>
+<body>
+    <div class="product-page">
+        <div class="product-image">
+            <img src="<%= product.image %>" alt="<%= product.name %>">
+        </div>
+        <div class="product-details">
+            <div class="product-header">
+                <h1><%= product.name %></h1>
+                <p><%= product.description %></p>
+                <span class="price">$<%= product.price %></span>
+            </div>
+            <div class="product-extras">
+                <h3>Extras</h3>
+                <p>Seleccione hasta 10 opciones</p>
+                <div class="extras-options">
+                    <% if (product.extras && product.extras.length > 0) { %>
+                        <% product.extras.forEach(function(extra) { %>
+                            <label>
+                                <input type="checkbox" name="extra" value="<%= extra.price %>">
+                                <%= extra.name %> + $<%= extra.price %>
+                            </label>
+                        <% }); %>
+                    <% } else { %>
+                        <p>No hay extras disponibles.</p>
+                    <% } %>
+                </div>
+            </div>
+            <div class="product-footer">
+                <div class="quantity">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                <button class="add-to-cart">Agregar $<%= product.price %></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,13 +1,14 @@
 body {
-    font-family: Arial, sans-serif;
-    background-image: url('/images/brochette_de_pollo.jpeg'); 
-    background-size: cover;
-    background-attachment: fixed;
-    background-color: rgba(0, 0, 0, 0.75); 
+    background-image: url('/images/shawarma_de_carne_al_plato.jpeg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
     background-blend-mode: darken; 
+    background-color: rgba(0, 0, 0, 0.75); 
+    margin: 0; 
+    padding: 0; 
+    font-family: Arial, sans-serif;
     color: #fff;
-    margin: 0;
-    padding: 0;
 }
 
 /* Quitar el subrayado y cambiar el color de los enlaces en el nombre del producto */
@@ -20,7 +21,6 @@ body {
     color: #ffa500; /* Cambia el color del texto al pasar el mouse, si lo deseas */
     text-decoration: none; /* Mantén el subrayado eliminado al pasar el mouse */
 }
-
 
 .product-page {
     display: flex;
@@ -35,12 +35,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 58%; /* Ajusta la altura del contenedor al 100% del padre */
+    height: 58%; /* Ajusta la altura del contenedor */
 }
 
 .product-image img {
-    width: 100%;
-    height: 100%; /* Ajusta la altura al 100% del contenedor */
+    width: 80%; /* Reduce el tamaño de la imagen al 80% */
+    height: auto; /* Mantiene la proporción de la imagen */
     object-fit: cover; /* La imagen cubrirá el contenedor sin distorsionarse */
     border-radius: 10px;
 }
@@ -143,96 +143,4 @@ body {
 .add-to-cart:hover {
     background-color: #ff8c00;
 }
-
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-.logo img {
-    width: 80px; 
-    margin-right: 50px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-}
-
-nav a:hover {
-    background-color: #444;
-    border-radius: 5px;
-}
-
-.menu-section {
-    padding: 20px;
-}
-
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.menu-item {
-    background-color: #333; 
-    padding: 10px;
-    border-radius: 10px;
-    overflow: hidden;
-    text-align: center;
-}
-
-.menu-item img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.item-details {
-    margin-top: 10px;
-}
-
-.item-details h3 {
-    margin: 10px 0 5px;
-    font-size: 18px;
-}
-
-.item-details p {
-    font-size: 14px;
-    color: #ccc;
-}
-
-.price {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.add-to-cart {
-    background-color: #ff9800;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.add-to-cart:hover {
-    background-color: #e68900;
-}
-
-footer {
-    background-color: #333;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-}
+    
