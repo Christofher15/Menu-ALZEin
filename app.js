@@ -8,8 +8,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Configura la carpeta estática 'public'
-app.use(express.static('public'));
-
+app.use(express.static('public')); 
 
 // Importa las rutas de productos
 const productsRouter = require('./routers/products');
@@ -36,7 +35,7 @@ app.get('/maps', (req, res) => {
 });
 
 // Configura las rutas de productos
-app.use('/products', productsRouter);
+app.use('/', productsRouter); 
 
 // Inicia el servidor
 app.listen(port, () => {

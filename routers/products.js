@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
+
 // Productos del menú
 const products = [
     // Sección Entradas Calientes
