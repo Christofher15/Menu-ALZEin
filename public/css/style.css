@@ -21,6 +21,7 @@ nav ul {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: wrap; /* Ajuste para permitir que los elementos se envuelvan en pantallas más pequeñas */
 }
 
 nav ul a {
@@ -46,7 +47,6 @@ nav ul li {
     margin-left: 20px;
 }
 
-
 .footer {
     display: flex;
     justify-content: space-around;
@@ -60,6 +60,7 @@ nav ul li {
 .footer__section {
     max-width: 300px;
     text-align: center;
+    margin: 10px;
 }
 
 .footer__section i {
@@ -94,32 +95,34 @@ nav ul li {
     margin-bottom: 0;
 }
 
-
-
 @media only screen and (max-width: 768px) {
     header {
         padding: 10px;
     }
 
-    .logo-container img {
-        max-width: 80%;
+    nav ul {
+        flex-direction: column; /* Cambiar a columna para pantallas más pequeñas */
+        align-items: center; /* Centrar elementos del menú */
     }
 
-    .icons-container {
-        top: 10px;
-        right: 10px;
+    nav ul a {
+        padding: 8px 15px;
+        font-size: 16px; /* Ajuste del tamaño de la fuente */
     }
 
-    .icons-container i {
-        font-size: 18px;
+    nav ul li {
+        display: block; /* Alinear elementos verticalmente */
+        margin: 5px 0; /* Espacio entre elementos del menú */
     }
 
-    nav li {
-        margin: 0 10px;
+    .footer {
+        flex-direction: column; /* Ajustar footer en columna para pantallas más pequeñas */
+        padding: 15px 0;
     }
 
-    nav a {
-        font-size: 14px;
+    .footer__section {
+        max-width: 100%;
+        margin: 10px 0; /* Espacio entre secciones del footer */
     }
 }
 
@@ -128,30 +131,32 @@ nav ul li {
         padding: 5px;
     }
 
-    .logo-container img
-
-{
-        max-width: 60%;
+    nav ul {
+        flex-direction: column; /* Mantener menú en columna para pantallas pequeñas */
+        align-items: center;
     }
 
-    .icons-container {
-        top: 5px;
-        right: 5px;
+    nav ul li {
+        margin: 5px 0; /* Espacio entre elementos del menú */
     }
 
-    .icons-container i {
-        font-size: 16px;
+    nav ul a {
+        font-size: 14px; /* Reducir tamaño de fuente en pantallas más pequeñas */
     }
 
-    nav li {
-        margin: 0 5px;
+    .footer {
+        flex-direction: column;
+        padding: 10px 0;
     }
 
-    nav a {
-        font-size: 12px;
+    .footer__section {
+        max-width: 100%;
+        margin: 10px 0;
     }
 
     .main-section img {
-        height: 60vh;
+        height: auto; /* Ajustar imagen para pantallas más pequeñas */
+        max-width: 100%;
+        margin: 10px 0; /* Espacio alrededor de la imagen */
     }
 }
