@@ -13,19 +13,31 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     text-align: left;
     position: relative;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro por defecto */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Efecto 'darken' en todas las pantallas */
 }
 
 .hero-content {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté encima del fondo */
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
     padding: 50px;
     border-radius: 0;
 }
@@ -91,18 +103,59 @@ h1 {
     background-color: #927009;
 }
 
-.footer {
-    background-color: #222;
-    padding: -20px;
+footer {
+    background-color: #333;
     text-align: center;
-    color: #fff;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    padding: 10px 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    width: 100%; 
+    flex-wrap: wrap; 
+}
+
+.footer__section {
+    flex: 1;
+    max-width: 300px; 
+    text-align: center;
+    margin: 10px;
+}
+
+.footer-icon {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 10px; 
+    vertical-align: middle; 
+}
+
+.footer__section h4 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.footer__section p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer img {
+    width: 50px; 
+    height: auto;
+    display: inline-block;
+    margin: 0 10px; 
 }
 
 .footer p {
-    margin: 5px 0;
+    margin-top: 10px; 
+    color: #fff;
 }
 
 /* Media Queries for Responsive Design */
@@ -110,6 +163,7 @@ h1 {
     .hero {
         height: auto;
         padding: 20px;
+        background-color: rgba(0, 0, 0, 0.7); /* Fondo más oscuro en pantallas medianas */
     }
 
     .hero-content {
@@ -119,8 +173,8 @@ h1 {
         height: auto;
     }
 
-    .hero-left {
-        margin-bottom: 20px;
+    .logo img {
+        width: 150px; /* Reducir tamaño del logo en pantallas medianas */
     }
 
     h1 {
@@ -146,6 +200,11 @@ h1 {
 }
 
 @media only screen and (max-width: 480px) {
+    .hero {
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.85); /* Fondo mucho más oscuro en pantallas pequeñas */
+    }
+
     h1 {
         font-size: 28px;
     }

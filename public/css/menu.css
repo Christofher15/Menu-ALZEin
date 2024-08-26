@@ -10,6 +10,12 @@ body {
     padding: 0;
 }
 
+/* Ajustes para el fondo y la visibilidad */
+@media (max-width: 767px) {
+    body {
+        background-color: rgba(0, 0, 0, 0.85); /* Más oscuro en pantallas pequeñas */
+    }
+}
 
 .menu-item a {
     text-decoration: none; 
@@ -19,8 +25,70 @@ body {
 .menu-item a:hover {
     color: #ffa500; 
     text-decoration: none; 
-
 }
+
+/* Fondo oscuro y texto blanco para el menú desplegable */
+.main-nav {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin: 0;
+}
+
+.main-nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff; /* Texto blanco */
+}
+
+.main-nav ul li a:hover {
+    background-color: #a17a18; /* Cambia el fondo al pasar el ratón */
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro para el menú en dispositivos móviles */
+        color: #fff; /* Texto blanco */
+        border-top: 1px solid #ff0000;
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-icon.active {
+        background-color: transparent;
+    }
+
+    .menu-icon.active::before {
+        transform: rotate(45deg);
+    }
+
+    .menu-icon.active::after {
+        transform: rotate(-45deg);
+    }
+}
+
 .product-page {
     display: flex;
     height: 100vh;
@@ -116,7 +184,7 @@ body {
 
 .quantity button {
     background-color: #444;
-    color: #fff;
+    color: #000000;
     border: none;
     padding: 10px;
     border-radius: 5px;
@@ -143,17 +211,58 @@ body {
     background-color: #ff8c00;
 }
 
-
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
     width: 80px; 
     margin-right: 50px;
+}
+
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    margin-left: auto;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #b19a27;
+    display: block;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color:  #b19a27;
+    transition: transform 0.3s ease;
+}
+
+.menu-icon::before {
+    top: -8px;
+}
+
+.menu-icon::after {
+    top: 8px;
 }
 
 nav ul {
@@ -162,14 +271,14 @@ nav ul {
     gap: 15px;
 }
 
-nav a {
-    color: #fff;
+nav ul li a {
+    color: #ffffff !important; 
     text-decoration: none;
     padding: 5px 10px;
 }
 
 nav a:hover {
-    background-color: #444;
+    background-color: #815f16;
     border-radius: 5px;
 }
 
@@ -234,8 +343,55 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    flex-wrap: wrap; 
 }
 
+.footer-content {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    width: 100%; 
+    flex-wrap: wrap; 
+}
+
+.footer__section {
+    flex: 1;
+    max-width: 300px; 
+    text-align: center;
+    margin: 10px;
+}
+
+.footer-icon {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 10px; 
+    vertical-align: middle; 
+}
+
+.footer__section h4 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.footer__section p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer img {
+    width: 50px; 
+    height: auto;
+    display: inline-block;
+    margin: 0 10px; 
+}
+
+.footer p {
+    margin-top: 10px; 
+    color: #fff;
+}
 
 /* Pantallas grandes (escritorio) */
 @media (min-width: 1024px) {
@@ -248,7 +404,7 @@ footer {
     }
 }
 
-/* Pantallas medianas (tabletas) */
+/* Pantallas medianas (tablets) */
 @media (min-width: 768px) and (max-width: 1023px) {
     .product-page {
         flex-direction: column;
@@ -265,7 +421,7 @@ footer {
     }
 }
 
-/* Pantallas pequeñas (móviles) */
+/* Pantallas pequeñas (teléfonos) */
 @media (max-width: 767px) {
     .product-page {
         flex-direction: column;
@@ -284,6 +440,7 @@ footer {
 
     nav ul {
         flex-direction: column;
+        
         gap: 10px;
     }
 
@@ -304,93 +461,9 @@ footer {
         width: 60px;
         margin-right: 0;
     }
-}
-/* styles for the hamburger menu button */
-.menu-toggle {
-    display: none; /* Hide by default */
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-}
-
-.menu-icon {
-    width: 30px;
-    height: 3px;
-    background-color: #ffee00;
-    display: block;
-    position: relative;
-    transition: background-color 0.3s ease;
-}
-
-.menu-icon::before,
-.menu-icon::after {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 3px;
-    background-color: #ffee00;
-    transition: transform 0.3s ease;
-}
-
-.menu-icon::before {
-    top: -8px;
-}
-
-.menu-icon::after {
-    top: 8px;
-}
-
-.main-nav {
-    display: flex;
-}
-
-.main-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.main-nav ul li {
-    margin: 0;
-}
-
-.main-nav ul li a {
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #333;
-}
-
-@media (max-width: 768px) {
-    .main-nav {
-        display: none;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #fff;
-        border-top: 1px solid #ff0000;
-    }
-
-    .main-nav.active {
-        display: block;
-    }
 
     .menu-toggle {
+        margin-top: 10px; 
         display: block;
-    }
-
-    .menu-icon.active {
-        background-color: transparent;
-    }
-
-    .menu-icon.active::before {
-        transform: rotate(45deg);
-    }
-
-    .menu-icon.active::after {
-        transform: rotate(-45deg);
     }
 }
