@@ -229,120 +229,23 @@ footer {
 
 /* Media Queries for Responsiveness */
 
+@media (max-width: 1200px) {
+    .product-card {
+    width: calc(32% - 20px);
+    }
+}
+
+@media (max-width: 992px) {
+    .product-card {
+    width: calc(48% - 20px);
+    }
+}
+
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block; 
-    }
-
-    .main-nav {
-        max-height: 0; 
-        position: absolute;
-        width: 100%;
-        top: 60px; 
-        left: 0;
-        background-color: #222;
-        padding: 0 20px;
-        flex-direction: column;
-        align-items: center;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-    }
-
-    .main-nav.active {
-        max-height: 500px; 
-    }
-
-    .menu-icon.active {
-        background-color: transparent;
-    }
-
-    .menu-icon.active::before {
-        transform: rotate(45deg);
-    }
-
-    .menu-icon.active::after {
-        transform: rotate(-45deg);
-    }
-
-    .main-nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .main-nav ul li a {
-        padding: 10px;
-    }
-
-    .menu-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-
-    .menu-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .menu-item img {
-        margin-bottom: 10px;
-    }
-
-    .add-to-cart {
-        margin-top: 10px;
+    .product-card {
+    width: calc(100% - 20px);
     }
 }
-
-@media (max-width: 480px) {
-    .main-nav ul {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .main-nav ul li a {
-        padding: 8px;
-    }
-
-    .menu-item {
-        padding: 10px;
-    }
-
-    .menu-item img {
-        width: 100%;
-        height: auto;
-        margin: 0;
-    }
-
-    .item-details h3 {
-        font-size: 16px;
-    }
-
-    .item-details p {
-        font-size: 12px;
-    }
-
-    .price {
-        font-size: 14px;
-    }
-}
-
-
-
-.logo img {
-    max-height: 50px;
-}
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5em;
-}
-
-.menu-icon::before {
-    content: '\2630'; /* Icono de hamburguesa */
-}
-
-
 
 /* Menú hamburguesa */
 @media (max-width: 764px) {
