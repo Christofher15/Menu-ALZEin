@@ -158,6 +158,9 @@ footer {
     color: #fff;
 }
 
+/* Responsive Styles */
+
+/* Tablets and small screens */
 @media only screen and (max-width: 768px) {
     .hero {
         height: auto;
@@ -198,10 +201,15 @@ footer {
     }
 }
 
+/* Mobile phones */
 @media only screen and (max-width: 480px) {
     .hero {
         height: auto;
         background-color: rgba(0, 0, 0, 0.85); 
+    }
+
+    .hero-content {
+        padding: 10px;
     }
 
     h1 {
@@ -227,5 +235,9 @@ footer {
 
     .footer p {
         font-size: 12px;
+    }
+
+    .footer__section {
+        max-width: 200px;
     }
 }
