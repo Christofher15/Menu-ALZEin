@@ -237,6 +237,8 @@ footer {
 }
 
 
+/* Media Queries for Responsiveness */
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: block; 
