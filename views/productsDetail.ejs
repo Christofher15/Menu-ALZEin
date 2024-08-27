@@ -2,11 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="website icon" type="png" href="/images/logo-Photoroom.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/productsDetail.css" />
     <title><%= product.name %> - Detalles del Producto</title>
 </head>
+<header>
+    <div class="logo">
+        <a href="/" class="logo">
+            <img src="/images/logo-Photoroom.png" alt="Logo">
+        </a>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle navigation">
+        <span class="menu-icon"></span>
+    </button>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/maps">Ubicacion</a></li>
+        </ul>
+    </nav>
+</header>
 <body>
+
     <div class="product-page">
         <div class="product-image">
             <img src="<%= product.image %>" alt="<%= product.name %>">
@@ -16,30 +34,6 @@
                 <h1><%= product.name %></h1>
                 <p><%= product.description %></p>
                 <span class="price">$<%= product.price %></span>
-            </div>
-            <div class="product-extras">
-                <h3>Extras</h3>
-                <p>Seleccione hasta 10 opciones</p>
-                <div class="extras-options">
-                    <% if (product.extras && product.extras.length > 0) { %>
-                        <% product.extras.forEach(function(extra) { %>
-                            <label>
-                                <input type="checkbox" name="extra" value="<%= extra.price %>">
-                                <%= extra.name %> + $<%= extra.price %>
-                            </label>
-                        <% }); %>
-                    <% } else { %>
-                        <p>No hay extras disponibles.</p>
-                    <% } %>
-                </div>
-            </div>
-            <div class="product-footer">
-                <div class="quantity">
-                    <button>-</button>
-                    <span>1</span>
-                    <button>+</button>
-                </div>
-                <button class="add-to-cart">Agregar $<%= product.price %></button>
             </div>
 
             <div class="product-navigation">
@@ -52,5 +46,30 @@
             </div>
         </div>
     </div>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer__section">
+                <i class="fas fa-credit-card"></i>
+                <img class="footer-icon" src="/images/metodo-de-pago.png" alt="Método de Pago">
+                <h4>Pagá con tarjeta de crédito, débito, MercadoPago o en efectivo</h4>
+                <p>
+                    En Al Zein te brindamos una variedad de métodos de pago
+                </p>
+            </div>
+    
+            <div class="footer__section">
+                <i class="fas fa-gift"></i>
+                <img class="footer-icon" src="/images/bolsa-de-la-compra (1).png" alt="Bolsa de Compra">
+                <h4>Servicio de Take Away</h4>
+                <p>
+                    Solo tienes que ver qué se te antoja, tomar el teléfono, llamas y pasas retirando o haces el pedido por PedidosYa o Rappi
+                </p>
+            </div>
+        </div>
+        <div class="footer">
+        <img src="/images/logo-Photoroom.png" alt="icono">
+        <p>&copy; 2017 Al Zein. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>

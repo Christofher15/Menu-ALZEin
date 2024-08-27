@@ -18,14 +18,14 @@ const products = [
 { id: 9, name: 'Shawarma de Carne al Plato', description: 'Carne, lechuga, tomate y cebolla, mayonesa de ajo y tarator.', price: 15000, image: '/images/shawarma_de_carne_al_plato.jpeg' },
 { id: 10, name: 'Shawarma de Pollo', description: 'Pollo, lechuga, tomate y cebolla, mayonesa de ajo.', price: 15000, image: '/images/shawarma_de_pollo.jpeg' },
 { id: 11, name: 'Shawarma de Pollo al Plato', description: 'Pollo, lechuga, tomate y cebolla, mayonesa de ajo y tarator.', price: 15000, image: '/images/shawarma_de_carne_al_plato.jpeg' },
-{ id: 12, name: 'Shawarma Mixto', description: 'Carne y pollo, lechuga, tomate y cebolla, mayonesa de ajo y tarator.', price: 15000, image: '/images/shawarma_de_carne.jpg' },
+{ id: 12, name: 'Shawarma Mixto', description: 'Carne y pollo, lechuga, tomate y cebolla, mayonesa de ajo y tarator.', price: 15000, image: '/images/shawarma.jpeg' },
 { id: 13, name: 'Shawarma Mixto al Plato', description: 'Carne y pollo, lechuga, tomate y cebolla, mayonesa de ajo y tarator.', price: 15000, image: '/images/shawarma_de_carne_al_plato.jpeg' },
 { id: 14, name: 'Shish Kebab', description: 'Carne picada puesta en fierros a la parrilla con papas o ensalada.', price: 15000, image: '/images/shish_kebab.jpeg' },
 { id: 15, name: 'Shish Taouk', description: 'Brochettes de pollo cortado a cuchillo con papas fritas o ensalada.', price: 15000, image: '/images/shish_kebab_de_carne_picada.jpeg' },
 { id: 16, name: 'Lomo', description: '2 brochettes de lomo cortado a cuchillo con papas fritas o ensalada.', price: 15000, image: '/images/brochette_de_pollo.jpeg' },
 { id: 17, name: 'Falafel en Sandwich', description: 'Lechuga, cebolla y tomate, salsa de ajo o hummus y salsa de tarator.', price: 15000, image: '/images/falafel.jpeg' },
 { id: 18, name: 'Carne al Plato', description: 'Carne picada bien condimentada a la parrilla con papas fritas o ensalada.', price: 15000, image: '/images/carne_picada_al_plato_pero_armada_tipo_hamburguesa_compactada_y_cocida.jpeg' },
-{ id: 19, name: 'Pollo Crocante', description: '1/2 porción de supremas de pollo condimentado al estilo crispy.', price: 15000, image: '/public/images/' },
+{ id: 19, name: 'Pollo Crocante', description: '1/2 porción de supremas de pollo condimentado al estilo crispy.', price: 15000, image: '/images/tenders_de_pollo_con_papas_franciscas.jpeg' },
 { id: 20, name: 'Toshka', description: 'Pan árabe relleno con carne picada condimentada y cocinado a la parrilla con papas fritas o ensalada.', price: 15000, image: '/images/toshka.jpg' },
 
 // Sección Platos Fríos/Ensaladas
