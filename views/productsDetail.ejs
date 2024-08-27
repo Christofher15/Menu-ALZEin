@@ -41,6 +41,16 @@
                 </div>
                 <button class="add-to-cart">Agregar $<%= product.price %></button>
             </div>
+
+            <!-- Botones de navegación para moverse entre productos -->
+            <div class="product-navigation">
+                <% if (previousProduct) { %>
+                    <a href="/detail/<%= previousProduct.id %>" class="nav-button">Anterior</a>
+                <% } %>
+                <% if (nextProduct) { %>
+                    <a href="/detail/<%= nextProduct.id %>" class="nav-button">Siguiente</a>
+                <% } %>
+            </div>
         </div>
     </div>
 </body>
