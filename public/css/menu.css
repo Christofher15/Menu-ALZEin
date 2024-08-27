@@ -333,3 +333,58 @@ footer {
         font-size: 14px;
     }
 }
+
+
+
+.logo img {
+    max-height: 50px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.menu-icon::before {
+    content: '\2630'; /* Icono de hamburguesa */
+}
+
+
+
+/* Menú hamburguesa */
+@media (max-width: 764px) {
+    .main-nav {
+        display: none;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+    }
+
+    .main-nav li {
+        margin: 0;
+        border-bottom: 1px solid #444;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 15px;
+        text-align: center;
+    }
+}
