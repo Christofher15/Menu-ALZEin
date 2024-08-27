@@ -91,10 +91,9 @@ header {
     border-radius: 5px;
 }
 
-/* Sección del menú */
 .menu-section {
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para mayor legibilidad */
+    background-color: rgba(0, 0, 0, 0.7); 
     border-radius: 10px;
     margin: 20px;
 }
@@ -108,7 +107,6 @@ header {
     color: #ff9800; 
 }
 
-/* Estilos para la cuadrícula del menú */
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
