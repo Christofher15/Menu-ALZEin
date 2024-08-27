@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #83680f;
+    background-color: #392909;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -62,7 +62,7 @@ header {
 .main-nav {
     display: flex; 
     flex-direction: row; 
-    background-color: #83680f;
+    background-color:  #392909;
     padding: 0 20px;
     position: relative; 
     top: 0; 
@@ -87,7 +87,7 @@ header {
 }
 
 .main-nav ul li a:hover {
-    background-color: #444;
+    background-color:  #392909;
     border-radius: 5px;
 }
 
@@ -166,19 +166,9 @@ header {
     color: #ff9800; 
 }
 
-.add-to-cart {
-    background-color: #ff9800;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
 
 footer {
-    background-color: #333;
+    background-color:  #392909;
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
