@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #392909;
+    background-color: #201604;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -35,7 +35,7 @@ header {
 .menu-icon {
     width: 30px;
     height: 3px;
-    background-color: #fff;
+    background-color: #ffa500;
     display: block;
     position: relative;
     transition: background-color 0.3s ease;
@@ -47,7 +47,7 @@ header {
     position: absolute;
     width: 30px;
     height: 3px;
-    background-color: #fff;
+    background-color: #ffa500;
     transition: transform 0.3s ease;
 }
 
@@ -62,7 +62,7 @@ header {
 .main-nav {
     display: flex; 
     flex-direction: row; 
-    background-color:  #392909;
+    background-color:  #201604;
     padding: 0 20px;
     position: relative; 
     top: 0; 
@@ -80,7 +80,7 @@ header {
 }
 
 .main-nav ul li a {
-    color: #fff;
+    color:  #ffa500;
     text-decoration: none;
     padding: 10px 15px;
     transition: background-color 0.3s;
@@ -101,10 +101,10 @@ header {
 .menu-section h2 {
     margin-top: 0;
     font-size: 24px;
-    border-bottom: 2px solid #ff9800;
+    border-bottom: 2px solid #ffa500;
     padding-bottom: 10px;
     margin-bottom: 20px;
-    color: #ff9800; 
+    color: #ffa500;
 }
 
 .menu-grid {
@@ -151,7 +151,7 @@ header {
 .item-details h3 {
     margin: 0;
     font-size: 18px;
-    color: #895a13e6; 
+    color: #ffa500;
 }
 
 .item-details p {
@@ -163,7 +163,7 @@ header {
 .price {
     font-size: 16px;
     font-weight: bold;
-    color: #ff9800; 
+    color: #ffa500; 
 }
 
 

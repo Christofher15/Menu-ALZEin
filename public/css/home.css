@@ -89,7 +89,19 @@ h1 {
 
 .menu-button {
     display: inline-block;
-    background-color: #dec60fd6;
+    background-color: #ffa500;
+    color: #000000;
+    padding: 15px 100px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.menu-button2 {
+    display: inline-block;
+    background-color: #ffa500;
     color: #000000;
     padding: 15px 100px;
     border-radius: 25px;
@@ -100,6 +112,10 @@ h1 {
 }
 
 .menu-button:hover {
+    background-color: #927009;
+}
+
+.menu-button2:hover {
     background-color: #927009;
 }
 

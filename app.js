@@ -30,6 +30,11 @@ app.get('/maps', (req, res) => {
     res.render('maps'); 
 });
 
+app.get('/TakeAwayDetails', (req, res) => {
+    res.render('TakeAwayDetails'); 
+});
+
+
 app.use('/', productsRouter); 
 
 app.listen(port, () => {
