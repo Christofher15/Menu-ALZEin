@@ -63,3 +63,31 @@ const products = [
 { id: 48, name: 'Schweppes Tónica', description: 'Schweppes tónica 500ml.', price: 3000, image: '/images/Schweppes-tonica.webp' },
 { id: 49, name: 'Schweppes Pomelo', description: 'Schweppes pomelo 500ml.', price: 3000, image: '/images/Schweppes-pomelo.webp' },
 ];
+
+// Función para obtener un producto por su ID
+function getProductById(id) {
+    return products.find(product => product.id === parseInt(id));
+}
+
+// Función para obtener el índice de un producto por su ID
+function getProductIndexById(id) {
+    return products.findIndex(product => product.id === parseInt(id));
+}
+
+// Ruta para los detalles del producto
+router.get('/deliveries/:id', (req, res) => {
+    const productId = req.params.id;
+    const productIndex = getProductIndexById(productId);
+
+    if (productIndex !== -1) {
+        const product = products[productIndex];
+        const previousProduct = products[productIndex - 1] || null;
+        const nextProduct = products[productIndex + 1] || null;
+
+        res.render('productsDetail', { product, previousProduct, nextProduct });
+    } else {
+        res.status(404).send('Producto no encontrado');
+    }
+});
+
+module.exports = router;
