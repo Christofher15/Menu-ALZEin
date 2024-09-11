@@ -105,8 +105,29 @@ const products = [
         // Sección Empanadas
         { id: 80, name: "Empanada de Queso", description: "Empanada árabe rellena de queso con perejil y especias.", price: 2500, image: "/images/empanada_queso_arabe_con_perejil.jpeg" },
         { id: 81, name: "Empanada de Carne", description: "Empanada árabe rellena de carne picada, cebolla y especias.", price: 2500, image: "/images/empanada_carne_arabe.jpeg" },
-        { id: 82, name: "Empanada de Espinaca", description: "Empanada árabe rellena de espinaca, cebolla, perejil y especias.", price: 2500, image: "/images/empanada_espinaca_con_perejil_cebolla_y_especias_arabes.jpeg" }
-    
+        { id: 82, name: "Empanada de Espinaca", description: "Empanada árabe rellena de espinaca, cebolla, perejil y especias.", price: 2500, image: "/images/empanada_espinaca_con_perejil_cebolla_y_especias_arabes.jpeg" },
+    // Sección Bebidas
+{ id: 83, name: 'Coca-Cola Común', description: 'Coca-Cola 500ml.', price: 1900, image: '/images/coca-cola.jpg' },
+{ id: 84, name: 'Coca-Cola Cero', description: 'Coca-Cola 500ml.', price: 1900, image: '/images/coca-cola cero.jpeg' },
+{ id: 85, name: 'Sprite Común', description: 'Sprite 500ml.', price: 1900, image: '/images/sprite-comun.jpg' },
+{ id: 85, name: 'Sprite Cero', description: 'Sprite cero 500ml.', price: 1900, image: '/images/sprite-cero.webp' },
+{ id: 86, name: 'Fanta Común', description: 'Fanta 500ml.', price: 1900, image: '/images/fanta.jpeg' },
+{ id: 87, name: 'Agua con Gas', description: 'Agua con gas 500ml.', price: 1900, image: '/images/agua con gas.webp' },
+{ id: 88, name: 'Agua sin Gas', description: 'Agua sin gas 500ml.', price: 1900, image: '/images/agua sin gas.webp' },
+{ id: 89, name: 'Levite Manzana', description: 'Levite de manzana 500ml.', price: 1900, image: '/images/levite-manzana.jpg' },
+{ id: 90, name: 'Levite Naranja', description: 'Levite de naranja 500ml.', price: 1900, image: '/images/levite-naranja.jpg' },
+{ id: 91, name: 'Levite Pera', description: 'Levite de pera 500ml.', price: 1900, image: '/images/levite-pera.webp' },
+{ id: 92, name: 'Levite Pomelo', description: 'Levite pomelo 500ml.', price: 1900, image: '/images/levite-pomelo.webp' },
+{ id: 93, name: 'Schweppes Tónica', description: 'Schweppes tónica 500ml.', price: 1900, image: '/images/Schweppes-tonica.webp' },
+{ id: 94, name: 'Schweppes Pomelo', description: 'Schweppes pomelo 500ml.', price: 1900, image: '/images/Schweppes-pomelo.webp' },
+
+//Sección Postres
+{ id: 95, name: "Beklawa de nueces", description: "Masa filo, nueces trituradas y almíbar", price: 3400, image: "/images/Hummus.jpg" },
+    { id: 95, name: "Beklawa de crema", description: "Masa filo, crema pastelera y queso ricotta", price: 3400, image: "/images/mtabal.jpg" },
+    { id: 97, name: "Mamul (Galletas árabes rellenas)", description: "Masa de sémola, harina, manteca y azúcar. Relleno de nueces, dátiles o coco", price: 3400, image: "/images/mohamara.jpg" },
+    { id: 98, name: "Mabrume", description: "Masa de cabello de ángel rellena con frutos secos", price: 3400, image: "/images/labane.webp" },
+    { id: 99, name: "Niditos de cabello de ángel", description: "Masa de cabello de ángel rellena de membrillo o damascos", price: 3400, image: "/images/kishke.jpg" }
+
     ];
 
 
